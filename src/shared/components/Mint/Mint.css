@@ -1,0 +1,121 @@
+.faucet-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.faucet-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faucet-info {
+  margin-bottom: 24px;
+}
+
+.faucet-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.faucet-info p {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.faucet-info ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+.faucet-info li {
+  color: #666;
+  margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.faucet-info li:before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: #0066cc;
+}
+
+.exchange-rate {
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.token-exchange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.token-amount {
+  font-weight: 600;
+  color: #333;
+}
+
+.exchange-arrow {
+  color: #666;
+}
+
+.faucet-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #0066cc;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.faucet-button:hover {
+  background: #0052a3;
+}
+
+.faucet-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.faucet-button.loading {
+  background: #ccc;
+}
+
+.error-message {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  border-radius: 6px;
+  color: #cf1322;
+}
+
+.success-message {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 6px;
+  color: #389e0d;
+}
+
+.tx-hash {
+  font-family: monospace;
+  word-break: break-all;
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #666;
+}

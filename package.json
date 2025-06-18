@@ -12,9 +12,11 @@
     "deploy-undername": "npm run build && permaweb-deploy --deploy-folder ./dist --arns-name $DEPLOY_ARNS_NAME --undername $DEPLOY_UNDERNAME"
   },
   "dependencies": {
+    "ao-js-sdk": "0.0.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-ga4": "2.1.0",
+    "react-icons": "5.5.0",
     "react-router-dom": "7.6.2"
   },
   "devDependencies": {

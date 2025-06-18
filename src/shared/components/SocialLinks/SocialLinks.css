@@ -1,0 +1,19 @@
+.social-links {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  gap: 16px;
+  z-index: 1000;
+}
+
+.social-link {
+  color: #000000;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,166 @@
+.request-stages {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+.stages-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 20px 0;
+  padding: 0 20px;
+  min-height: 150px;
+}
+
+.stage-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.stage-point.active {
+  opacity: 1;
+}
+
+.stage-icon-container {
+  background: #f5f7fa;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border: 2px solid #d9d9d9;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.stage-point.active .stage-icon-container {
+  background: #e6f7ff;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 4px rgba(24, 144, 255, 0.1);
+}
+
+.stage-connector {
+  flex: 1;
+  height: 2px;
+  background: #d9d9d9;
+  margin: 0 -10px;
+  position: relative;
+  top: -30px;
+  transition: all 0.3s ease;
+}
+
+.stage-connector.active {
+  background: #1890ff;
+}
+
+.stage-info {
+  text-align: center;
+  max-width: 150px;
+  margin-top: -4px;
+}
+
+.stage-icon {
+  font-size: 20px;
+  color: #8c8c8c;
+  transition: all 0.3s ease;
+}
+
+.stage-point.active .stage-icon {
+  color: #1890ff;
+}
+
+.stage-title {
+  font-size: 0.9rem;
+  color: #262626;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.stage-description {
+  font-size: 0.8rem;
+  color: #595959;
+  margin-bottom: 8px;
+  min-height: 32px;
+  line-height: 1.2;
+}
+
+.completion-time {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.random-value {
+  font-size: 1.5rem;
+  color: #1890ff;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 16px;
+  padding: 12px;
+  background: #f0f9ff;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.random-value.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .stages-progress {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    min-height: auto;
+  }
+
+  .stage-point {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .stage-info {
+    margin-left: 16px;
+    text-align: left;
+  }
+
+  .stage-connector {
+    width: 2px;
+    height: 24px;
+    margin: 8px 0 8px 19px;
+    top: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.stage-icon.pulse {
+  animation: pulse 1.5s ease infinite;
+}

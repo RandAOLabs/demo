@@ -1,0 +1,16 @@
+.wallet-address {
+  font-family: monospace;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.wallet-address:hover {
+  opacity: 0.8;
+}
+
+.wallet-status {
+  color: black;
+  margin-top: 8px;
+  font-size: 14px;
+}

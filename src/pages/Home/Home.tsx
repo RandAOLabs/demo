@@ -1,26 +1,38 @@
-import { useState } from 'react'
-import { Counter, LogoLink } from '../../shared/components'
+import { 
+  ConnectWalletButton, 
+  Mint, 
+  Topbar, 
+  TokenBalance, 
+  RandomNumberGenerator, 
+  SocialLinks,
+  Announcement 
+} from '../../shared/components'
+import { useWallet } from '../../context/WalletContext'
 import './Home.css'
 
-function Home() {
-  const [count, setCount] = useState(0)
+const Home = () => {
+  const { isConnected } = useWallet()
 
   return (
-    <div className="home">
-      <div className="logo-container">
-        <LogoLink
-          href="https://ar.io"
-          src="/ario_black.png"
-          alt="AR.IO Logo"
-        />
-        <LogoLink
-          href="https://react.dev"
-          src="/react.svg"
-          alt="React Logo"
-        />
+    <div className="app-container">
+      <Announcement message="This application is currently under active development. All tokens are for testing purposes only and hold no monetary value. Some features may be unstable. Some users may experience delays due to high network traffic." />
+      <Topbar />
+      <div className="content-container">
+        {!isConnected ? (
+          <ConnectWalletButton />
+        ) : (
+          <div className="connected-content">
+            <div className="mint-section">
+              <Mint />
+              <TokenBalance />
+            </div>
+            <div className="rng-section">
+              <RandomNumberGenerator />
+            </div>
+          </div>
+        )}
       </div>
-      <h1>AR.IO + React</h1>
-      <Counter count={count} setCount={setCount} />
+      <SocialLinks />
     </div>
   )
 }

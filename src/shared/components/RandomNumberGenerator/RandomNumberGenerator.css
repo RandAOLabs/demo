@@ -1,0 +1,52 @@
+.random-number-generator {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.random-number-generator h2 {
+  margin: 0 0 24px;
+  font-size: 1.5rem;
+  color: #262626;
+  text-align: center;
+}
+
+.input-section {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: flex-end;
+}
+
+.input-section > * {
+  flex: 1;
+}
+
+.input-section button {
+  margin-bottom: 4px;
+}
+
+.error-message {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  border-radius: 6px;
+  color: #cf1322;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .input-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .input-section button {
+    margin-top: 8px;
+  }
+}
